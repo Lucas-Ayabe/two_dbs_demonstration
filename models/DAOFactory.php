@@ -11,7 +11,7 @@ class DAOFactory
             case 'mysql':
                 return new MySQLDAO($connection);
             default:
-                throw new Exception('Wrong user type passed.');
+                throw new Exception('Wrong DAO type passed.');
         }
     }
 }
