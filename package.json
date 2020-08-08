@@ -1,0 +1,11 @@
+{
+  "name": "two_dbs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucas Akira Ayabe <lucas.ayabe@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.14.3",
+    "prettier": "^2.0.5"
+  }
+}
