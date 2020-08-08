@@ -3,7 +3,6 @@ require './vendor/autoload.php';
 
 use Models\Connection;
 use Models\DAOFactory;
-use Models\Debug;
 
 $laravelTodoDsn = "mysql:dbname=laravel_todo;host=localhost";
 $devsnotesDsn = "mysql:dbname=devsnotes;host=localhost";
@@ -23,6 +22,9 @@ $daos = [$laravelTodoDao, $devsnotesDao];
  */
 $tables = ["tasks", "notes"];
 
+/**
+ * @var array
+ */
 $daosRegisters = array_map(
     function (\Models\MySQLDAO $dao, string $table) {
         return $dao->setTable($table)->all();
@@ -31,6 +33,6 @@ $daosRegisters = array_map(
     $tables
 );
 
-$data = [$daosRegisters];
+$data = $daosRegisters;
 
 include_once './views/index.php';
